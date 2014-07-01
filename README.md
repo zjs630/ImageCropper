@@ -1,0 +1,6 @@
+ImageCropper
+============
+
+iOS,仿Android系统，path app图片裁剪效果的demo。
+
+图片裁剪，支持正方形和矩形裁剪。矩形宽高比2：1。
