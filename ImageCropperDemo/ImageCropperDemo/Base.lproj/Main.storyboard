@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,33 +18,31 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gm-qp-Jyr">
                                 <rect key="frame" x="108" y="240" width="105" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="1iR-dJ-giz"/>
                                     <constraint firstAttribute="width" constant="105" id="8ig-Jh-AJM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="添加图片">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="addImageBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NHF-Ol-qj2"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d3n-v5-nGp">
-                                <rect key="frame" x="0.0" y="40" width="320" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="ekn-3i-Qco"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="d3n-v5-nGp" secondAttribute="trailing" id="2PB-fw-oGy"/>
                             <constraint firstItem="9Gm-qp-Jyr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="108" id="DDL-xk-lnk"/>
@@ -57,68 +60,10 @@
             </objects>
             <point key="canvasLocation" x="-43" y="119"/>
         </scene>
-        <!--Image Cropper View Controller-->
-        <scene sceneID="E6L-oU-Uo8">
-            <objects>
-                <viewController storyboardIdentifier="ImageCropperStoryboardID" id="PuJ-CJ-FKw" customClass="ImageCropperViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gPR-32-rlz"/>
-                        <viewControllerLayoutGuide type="bottom" id="KdG-00-s5j"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zdd-Pj-Ik1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7C-Uk-df8" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-rV-CyV">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </scrollView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFT-an-1Wr" customClass="ImageCropperFooterView">
-                                        <rect key="frame" x="0.0" y="495" width="320" height="73"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="73" id="6oo-Ce-LBI"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="AEX-rV-CyV" firstAttribute="leading" secondItem="q7C-Uk-df8" secondAttribute="leading" id="4mo-8w-8Qb"/>
-                                    <constraint firstAttribute="bottom" secondItem="AEX-rV-CyV" secondAttribute="bottom" id="6xH-qX-EXH"/>
-                                    <constraint firstItem="HFT-an-1Wr" firstAttribute="leading" secondItem="q7C-Uk-df8" secondAttribute="leading" id="8WB-pg-wLp"/>
-                                    <constraint firstAttribute="trailing" secondItem="HFT-an-1Wr" secondAttribute="trailing" id="8ZY-bG-LK5"/>
-                                    <constraint firstItem="AEX-rV-CyV" firstAttribute="top" secondItem="q7C-Uk-df8" secondAttribute="top" id="Xcr-mx-tbp"/>
-                                    <constraint firstAttribute="bottom" secondItem="HFT-an-1Wr" secondAttribute="bottom" id="Xhg-Ue-8Sn"/>
-                                    <constraint firstAttribute="trailing" secondItem="AEX-rV-CyV" secondAttribute="trailing" id="gAS-Sa-0E4"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="KdG-00-s5j" firstAttribute="top" secondItem="q7C-Uk-df8" secondAttribute="bottom" id="Ird-aP-Paa"/>
-                            <constraint firstAttribute="trailing" secondItem="q7C-Uk-df8" secondAttribute="trailing" id="KFy-C5-PHs"/>
-                            <constraint firstItem="q7C-Uk-df8" firstAttribute="leading" secondItem="zdd-Pj-Ik1" secondAttribute="leading" id="irw-6l-9ej"/>
-                            <constraint firstItem="q7C-Uk-df8" firstAttribute="top" secondItem="zdd-Pj-Ik1" secondAttribute="top" id="sir-3N-UFv"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="footerView" destination="HFT-an-1Wr" id="Td5-wd-63o"/>
-                        <outlet property="myScrollView" destination="AEX-rV-CyV" id="ltj-Ja-pJc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qbg-fb-oQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="451" y="39"/>
-        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>

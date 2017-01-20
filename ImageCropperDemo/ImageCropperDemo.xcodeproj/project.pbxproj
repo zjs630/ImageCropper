@@ -21,11 +21,13 @@
 		62F5471B195D76200070206E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F546FD195D76200070206E /* UIKit.framework */; };
 		62F54723195D76200070206E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62F54721195D76200070206E /* InfoPlist.strings */; };
 		62F54725195D76200070206E /* ImageCropperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F54724195D76200070206E /* ImageCropperDemoTests.m */; };
-		62F54735195D77310070206E /* ImageCropperFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F54730195D77310070206E /* ImageCropperFooterView.m */; };
-		62F54736195D77310070206E /* ImageCropperMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F54732195D77310070206E /* ImageCropperMaskView.m */; };
-		62F54737195D77310070206E /* ImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F54734195D77310070206E /* ImageCropperViewController.m */; };
 		62F54745195D79DC0070206E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F54744195D79DC0070206E /* MBProgressHUD.m */; };
 		62F54748195D7AD40070206E /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F54747195D7AD40070206E /* UIImage+fixOrientation.m */; };
+		E5E792041E2FBC5D00D294E1 /* CropperFooterView.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E792031E2FBC5D00D294E1 /* CropperFooterView.xcassets */; };
+		E5E792111E32038A00D294E1 /* ICImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7920F1E32038A00D294E1 /* ICImageCropperViewController.m */; };
+		E5E792121E32038A00D294E1 /* ICImageCropperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5E792101E32038A00D294E1 /* ICImageCropperViewController.xib */; };
+		E5E792171E32053000D294E1 /* ImageCropperFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E792141E32053000D294E1 /* ImageCropperFooterView.m */; };
+		E5E792181E32053000D294E1 /* ImageCropperMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E792161E32053000D294E1 /* ImageCropperMaskView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,16 +60,18 @@
 		62F54720195D76200070206E /* ImageCropperDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageCropperDemoTests-Info.plist"; sourceTree = "<group>"; };
 		62F54722195D76200070206E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		62F54724195D76200070206E /* ImageCropperDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCropperDemoTests.m; sourceTree = "<group>"; };
-		62F5472F195D77310070206E /* ImageCropperFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCropperFooterView.h; sourceTree = "<group>"; };
-		62F54730195D77310070206E /* ImageCropperFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCropperFooterView.m; sourceTree = "<group>"; };
-		62F54731195D77310070206E /* ImageCropperMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCropperMaskView.h; sourceTree = "<group>"; };
-		62F54732195D77310070206E /* ImageCropperMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCropperMaskView.m; sourceTree = "<group>"; };
-		62F54733195D77310070206E /* ImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCropperViewController.h; sourceTree = "<group>"; };
-		62F54734195D77310070206E /* ImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCropperViewController.m; sourceTree = "<group>"; };
 		62F54743195D79DC0070206E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		62F54744195D79DC0070206E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		62F54746195D7AD40070206E /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
 		62F54747195D7AD40070206E /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
+		E5E792031E2FBC5D00D294E1 /* CropperFooterView.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CropperFooterView.xcassets; sourceTree = "<group>"; };
+		E5E7920E1E32038A00D294E1 /* ICImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageCropperViewController.h; sourceTree = "<group>"; };
+		E5E7920F1E32038A00D294E1 /* ICImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageCropperViewController.m; sourceTree = "<group>"; };
+		E5E792101E32038A00D294E1 /* ICImageCropperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICImageCropperViewController.xib; sourceTree = "<group>"; };
+		E5E792131E32053000D294E1 /* ImageCropperFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCropperFooterView.h; path = View/ImageCropperFooterView.h; sourceTree = "<group>"; };
+		E5E792141E32053000D294E1 /* ImageCropperFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCropperFooterView.m; path = View/ImageCropperFooterView.m; sourceTree = "<group>"; };
+		E5E792151E32053000D294E1 /* ImageCropperMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCropperMaskView.h; path = View/ImageCropperMaskView.h; sourceTree = "<group>"; };
+		E5E792161E32053000D294E1 /* ImageCropperMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCropperMaskView.m; path = View/ImageCropperMaskView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,13 +131,12 @@
 		62F546FF195D76200070206E /* ImageCropperDemo */ = {
 			isa = PBXGroup;
 			children = (
-				62F54742195D79DC0070206E /* MBProgressHUD */,
 				62F5472E195D77310070206E /* ImageCopper */,
 				62F54708195D76200070206E /* ICAppDelegate.h */,
 				62F54709195D76200070206E /* ICAppDelegate.m */,
-				62F5470B195D76200070206E /* Main.storyboard */,
 				62F5470E195D76200070206E /* ICViewController.h */,
 				62F5470F195D76200070206E /* ICViewController.m */,
+				62F5470B195D76200070206E /* Main.storyboard */,
 				62F54711195D76200070206E /* Images.xcassets */,
 				62F54700195D76200070206E /* Supporting Files */,
 			);
@@ -172,14 +175,10 @@
 		62F5472E195D77310070206E /* ImageCopper */ = {
 			isa = PBXGroup;
 			children = (
-				62F5472F195D77310070206E /* ImageCropperFooterView.h */,
-				62F54730195D77310070206E /* ImageCropperFooterView.m */,
-				62F54731195D77310070206E /* ImageCropperMaskView.h */,
-				62F54732195D77310070206E /* ImageCropperMaskView.m */,
-				62F54733195D77310070206E /* ImageCropperViewController.h */,
-				62F54734195D77310070206E /* ImageCropperViewController.m */,
-				62F54746195D7AD40070206E /* UIImage+fixOrientation.h */,
-				62F54747195D7AD40070206E /* UIImage+fixOrientation.m */,
+				E5E7920D1E32038A00D294E1 /* Controller */,
+				E5E792061E2FBE9D00D294E1 /* LIb */,
+				E5E792051E2FBE1E00D294E1 /* Category */,
+				E5E792021E2FBAC400D294E1 /* View */,
 			);
 			path = ImageCopper;
 			sourceTree = "<group>";
@@ -190,7 +189,47 @@
 				62F54743195D79DC0070206E /* MBProgressHUD.h */,
 				62F54744195D79DC0070206E /* MBProgressHUD.m */,
 			);
-			path = MBProgressHUD;
+			name = MBProgressHUD;
+			path = ../MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		E5E792021E2FBAC400D294E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5E792131E32053000D294E1 /* ImageCropperFooterView.h */,
+				E5E792141E32053000D294E1 /* ImageCropperFooterView.m */,
+				E5E792151E32053000D294E1 /* ImageCropperMaskView.h */,
+				E5E792161E32053000D294E1 /* ImageCropperMaskView.m */,
+				E5E792031E2FBC5D00D294E1 /* CropperFooterView.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E5E792051E2FBE1E00D294E1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				62F54746195D7AD40070206E /* UIImage+fixOrientation.h */,
+				62F54747195D7AD40070206E /* UIImage+fixOrientation.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		E5E792061E2FBE9D00D294E1 /* LIb */ = {
+			isa = PBXGroup;
+			children = (
+				62F54742195D79DC0070206E /* MBProgressHUD */,
+			);
+			name = LIb;
+			sourceTree = "<group>";
+		};
+		E5E7920D1E32038A00D294E1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5E7920E1E32038A00D294E1 /* ICImageCropperViewController.h */,
+				E5E7920F1E32038A00D294E1 /* ICImageCropperViewController.m */,
+				E5E792101E32038A00D294E1 /* ICImageCropperViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +277,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = IC;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "天天飞度";
 				TargetAttributes = {
 					62F54716195D76200070206E = {
@@ -271,8 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				62F54712195D76200070206E /* Images.xcassets in Resources */,
+				E5E792121E32038A00D294E1 /* ICImageCropperViewController.xib in Resources */,
 				62F54704195D76200070206E /* InfoPlist.strings in Resources */,
 				62F5470D195D76200070206E /* Main.storyboard in Resources */,
+				E5E792041E2FBC5D00D294E1 /* CropperFooterView.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,13 +332,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62F54737195D77310070206E /* ImageCropperViewController.m in Sources */,
+				E5E792111E32038A00D294E1 /* ICImageCropperViewController.m in Sources */,
+				E5E792171E32053000D294E1 /* ImageCropperFooterView.m in Sources */,
 				62F5470A195D76200070206E /* ICAppDelegate.m in Sources */,
 				62F54748195D7AD40070206E /* UIImage+fixOrientation.m in Sources */,
 				62F54706195D76200070206E /* main.m in Sources */,
 				62F54710195D76200070206E /* ICViewController.m in Sources */,
-				62F54736195D77310070206E /* ImageCropperMaskView.m in Sources */,
-				62F54735195D77310070206E /* ImageCropperFooterView.m in Sources */,
+				E5E792181E32053000D294E1 /* ImageCropperMaskView.m in Sources */,
 				62F54745195D79DC0070206E /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,13 +402,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -380,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -399,20 +446,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -422,10 +474,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageCropperDemo/ImageCropperDemo-Prefix.pch";
 				INFOPLIST_FILE = "ImageCropperDemo/ImageCropperDemo-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tt139.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -435,10 +487,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageCropperDemo/ImageCropperDemo-Prefix.pch";
 				INFOPLIST_FILE = "ImageCropperDemo/ImageCropperDemo-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tt139.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -460,6 +512,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "ImageCropperDemoTests/ImageCropperDemoTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tt139.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -478,6 +531,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageCropperDemo/ImageCropperDemo-Prefix.pch";
 				INFOPLIST_FILE = "ImageCropperDemoTests/ImageCropperDemoTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tt139.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -503,6 +557,7 @@
 				62F5472A195D76200070206E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62F5472B195D76200070206E /* Build configuration list for PBXNativeTarget "ImageCropperDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +566,7 @@
 				62F5472D195D76200070206E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

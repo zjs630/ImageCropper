@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ICImageCropperViewController">
+            <connections>
+                <outlet property="footerView" destination="MBu-Qz-FQS" id="jbx-HL-I3e"/>
+                <outlet property="myScrollView" destination="OKt-W6-2hl" id="ZpX-IT-SuT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKt-W6-2hl">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBu-Qz-FQS" customClass="ImageCropperFooterView">
+                    <rect key="frame" x="0.0" y="498" width="320" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELs-jJ-hMO" userLabel="backBtn">
+                            <rect key="frame" x="0.0" y="-1.5" width="73" height="73"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="73" id="eyE-QG-tmH"/>
+                                <constraint firstAttribute="width" constant="73" id="zP6-8h-tG4"/>
+                            </constraints>
+                            <state key="normal" image="cha"/>
+                            <state key="highlighted" image="cha_press"/>
+                            <connections>
+                                <action selector="backBtnPressed" destination="MBu-Qz-FQS" eventType="touchUpInside" id="Wob-bo-Bhw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTu-oX-nBT" userLabel="rectangleBtn">
+                            <rect key="frame" x="89.5" y="-1.5" width="64" height="73"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="73" id="dEp-5s-lig"/>
+                            </constraints>
+                            <state key="normal" image="changkuang"/>
+                            <state key="highlighted" image="changkuang_press"/>
+                            <connections>
+                                <action selector="stylePressed:" destination="MBu-Qz-FQS" eventType="touchUpInside" id="kTX-ie-zL7"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrq-7U-yGz" userLabel="center">
+                            <rect key="frame" x="158.5" y="0.0" width="2" height="70"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="RUh-zF-OAC"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jP-T1-nQS" userLabel="squareBtn">
+                            <rect key="frame" x="170.5" y="-1.5" width="64" height="73"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="73" id="Oks-Qk-Pqx"/>
+                            </constraints>
+                            <state key="normal" image="fangkuang"/>
+                            <state key="highlighted" image="fangkuang_press"/>
+                            <connections>
+                                <action selector="stylePressed:" destination="MBu-Qz-FQS" eventType="touchUpInside" id="uIz-cF-DgX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alq-cK-82Y" userLabel="doneBtn">
+                            <rect key="frame" x="247" y="-1.5" width="73" height="73"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="73" id="M7Z-yM-5Fg"/>
+                                <constraint firstAttribute="height" constant="73" id="YQ0-Hr-lGW"/>
+                            </constraints>
+                            <state key="normal" image="dui"/>
+                            <state key="highlighted" image="dui_press"/>
+                            <connections>
+                                <action selector="doneBtnPressed" destination="MBu-Qz-FQS" eventType="touchUpInside" id="wod-og-GMp"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="hrq-7U-yGz" firstAttribute="centerX" secondItem="MBu-Qz-FQS" secondAttribute="centerX" id="6aS-qj-NJu"/>
+                        <constraint firstItem="ELs-jJ-hMO" firstAttribute="centerY" secondItem="MBu-Qz-FQS" secondAttribute="centerY" id="8fs-QJ-Rpx"/>
+                        <constraint firstAttribute="bottom" secondItem="hrq-7U-yGz" secondAttribute="bottom" id="FQm-fu-Qsz"/>
+                        <constraint firstItem="4jP-T1-nQS" firstAttribute="width" secondItem="MBu-Qz-FQS" secondAttribute="width" multiplier="0.2" id="NmN-0C-CB1"/>
+                        <constraint firstItem="MTu-oX-nBT" firstAttribute="centerY" secondItem="MBu-Qz-FQS" secondAttribute="centerY" id="T7N-7N-qDB"/>
+                        <constraint firstItem="4jP-T1-nQS" firstAttribute="centerY" secondItem="MBu-Qz-FQS" secondAttribute="centerY" id="Vr9-6T-daU"/>
+                        <constraint firstItem="hrq-7U-yGz" firstAttribute="leading" secondItem="MTu-oX-nBT" secondAttribute="trailing" constant="5" id="Z1A-9c-s9m"/>
+                        <constraint firstItem="4jP-T1-nQS" firstAttribute="leading" secondItem="hrq-7U-yGz" secondAttribute="trailing" constant="10" id="foL-pw-dVf"/>
+                        <constraint firstItem="MTu-oX-nBT" firstAttribute="width" secondItem="MBu-Qz-FQS" secondAttribute="width" multiplier="0.2" id="ilT-bf-Jwh"/>
+                        <constraint firstItem="hrq-7U-yGz" firstAttribute="top" secondItem="MBu-Qz-FQS" secondAttribute="top" id="js4-CB-qdY"/>
+                        <constraint firstAttribute="trailing" secondItem="alq-cK-82Y" secondAttribute="trailing" id="nhh-6b-nW1"/>
+                        <constraint firstAttribute="height" constant="70" id="ra0-1b-o5D"/>
+                        <constraint firstItem="ELs-jJ-hMO" firstAttribute="leading" secondItem="MBu-Qz-FQS" secondAttribute="leading" id="yyb-w6-0oa"/>
+                        <constraint firstItem="alq-cK-82Y" firstAttribute="centerY" secondItem="MBu-Qz-FQS" secondAttribute="centerY" id="zfY-ub-3yh"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="backBtn" destination="ELs-jJ-hMO" id="TBg-cB-K38"/>
+                        <outlet property="doneBtn" destination="alq-cK-82Y" id="9tw-8X-p7k"/>
+                        <outlet property="rectangleBtn" destination="MTu-oX-nBT" id="Lzo-uL-xUt"/>
+                        <outlet property="squareBtn" destination="4jP-T1-nQS" id="OXE-fG-Isz"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OKt-W6-2hl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7Jh-O1-gic"/>
+                <constraint firstAttribute="bottom" secondItem="MBu-Qz-FQS" secondAttribute="bottom" id="8kz-6s-kBr"/>
+                <constraint firstItem="MBu-Qz-FQS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="C68-mD-ABV"/>
+                <constraint firstAttribute="bottom" secondItem="OKt-W6-2hl" secondAttribute="bottom" id="HHl-xR-2wU"/>
+                <constraint firstAttribute="trailing" secondItem="MBu-Qz-FQS" secondAttribute="trailing" id="bPs-xM-cx8"/>
+                <constraint firstItem="OKt-W6-2hl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cyd-D5-KAt"/>
+                <constraint firstAttribute="trailing" secondItem="OKt-W6-2hl" secondAttribute="trailing" id="tBS-1N-TTg"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="cha" width="23" height="23"/>
+        <image name="cha_press" width="23" height="23"/>
+        <image name="changkuang" width="42" height="22"/>
+        <image name="changkuang_press" width="42" height="22"/>
+        <image name="dui" width="33" height="23"/>
+        <image name="dui_press" width="33" height="23"/>
+        <image name="fangkuang" width="22" height="22"/>
+        <image name="fangkuang_press" width="22" height="22"/>
+    </resources>
+</document>

@@ -1,36 +1,36 @@
 //
-//  ImageCropperViewController.m
-//  eMeiPu
+//  ICImageCropperViewController.m
+//  ImageCropperDemo
 //
-//  Created by 张京顺 on 14-3-12.
-//  Copyright (c) 2014年 天天飞度. All rights reserved.
+//  Created by ZhangJingshun on 2017/1/19.
+//  Copyright © 2017年 天天飞度. All rights reserved.
 //
 
-#import "ImageCropperViewController.h"
+#import "ICImageCropperViewController.h"
+
 #import "ImageCropperMaskView.h"
 #import "ImageCropperFooterView.h"
 #import "MBProgressHUD.h"
 
-@interface ImageCropperViewController ()<UIGestureRecognizerDelegate,CropperFooterViewDelegate>
+@interface ICImageCropperViewController ()<UIGestureRecognizerDelegate,CropperFooterViewDelegate>
 
 @property (nonatomic,strong) UIView *borderView;
 @property (nonatomic,strong) UIImageView *imgView;
 @property (nonatomic,weak) IBOutlet UIScrollView *myScrollView;
 @property (nonatomic,strong) ImageCropperMaskView *maskView;
-@property (nonatomic) int cropper_width;
-@property (nonatomic) int cropper_height;
+@property (nonatomic) int cropper_width;    //裁剪宽度
+@property (nonatomic) int cropper_height;   //裁剪高度
 @property (nonatomic,weak) IBOutlet ImageCropperFooterView *footerView;
 
-@property (nonatomic,assign) BOOL currentScaleIsHeight;
+@property (nonatomic,assign) BOOL currentScaleIsHeight; //当前缩放是否是按高度
 
 @end
 
-@implementation ImageCropperViewController
+@implementation ICImageCropperViewController
 
-- (void)setMyImage:(UIImage *)image
-{
+- (void)setMyImage:(UIImage *)image{
     _myImage = image;
-
+    
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         UIImage *imagefixed = [_myImage fixOrientation];//添加UIImage+fixOrientation.h引用
         while (_imgView == nil) {
@@ -40,7 +40,6 @@
             _imgView.image = imagefixed;
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         });
-
     });
 }
 
@@ -57,54 +56,54 @@
 
 #pragma mark -
 
--(void)loadView
-{
+-(void)loadView{
     [super loadView];
-    [_myScrollView setBackgroundColor:[UIColor blackColor]];
-    [_myScrollView setDelegate:self];
-    [_myScrollView setShowsHorizontalScrollIndicator:NO];
-    [_myScrollView setShowsVerticalScrollIndicator:NO];
+    
+    //设置滚动视图
+    _myScrollView.backgroundColor = [UIColor blackColor];
+    _myScrollView.delegate = self;
     _myScrollView.bounces = NO;
-    [_myScrollView setMaximumZoomScale:2.0];
+    _myScrollView.showsVerticalScrollIndicator = NO;
+    _myScrollView.showsHorizontalScrollIndicator = NO;
+    _myScrollView.maximumZoomScale = 2.0;
     _myScrollView.bouncesZoom = NO;
     
     _footerView.delegate = self;
     
-    _cropper_width = 320;
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-
+    
     _imgView = [[UIImageView alloc] initWithFrame:CGRectZero];
     _imgView.userInteractionEnabled = YES;
     [_myScrollView addSubview:_imgView];
-
-    if (_isHiddenStyleSelect) {
+    
+    if (_isHiddenStyleSelect) {//如果仅仅是矩形裁剪，隐藏选择类型
         [_footerView hiddenSelectStyle];
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-
+    
     _imgView.frame = CGRectMake(0, 0, _myImage.size.width, _myImage.size.height);
     
-    [_myScrollView setContentSize:[_imgView frame].size];
+    [_myScrollView setContentSize:_imgView.bounds.size];
     
     [[self maskView] setFrame:_myScrollView.frame];
+    
+    _cropper_width = self.view.bounds.size.width;
+
     float bili = _myImage.size.width/_myImage.size.height;
     if (bili>2) {
-        _cropper_height = 160;
+        _cropper_height = self.view.bounds.size.width/2;
         [self heightScale];
-    }
-    else {
+    }else {
         [self widthScale];
     }
-
+    
     if (_myImage.size.width<=_myImage.size.height) {//宽小于高，正方形裁剪
         [_footerView changeToSquare];
         [self squareStyle];
-    }
-    else{
+    }else{
         [_footerView changeToRectangle];
         [self rectangleStyle];
     }
@@ -114,21 +113,16 @@
     }
     
     [_myScrollView setContentOffset:CGPointMake((_imgView.frame.size.width -_cropper_width)/2, (_imgView.frame.size.height-_myScrollView.frame.size.height)/2)];
-
-    
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
+- (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.navigationController.navigationBar setHidden:NO];
-
 }
 
 #pragma mark - 裁剪样式
 
-- (void)heightScale
-{
+- (void)heightScale{
     float scale = _cropper_height / _myImage.size.height;
     if (scale>1) {
         [_myScrollView setMaximumZoomScale:scale+scale];
@@ -138,10 +132,8 @@
     _currentScaleIsHeight = YES;
 }
 
-- (void)widthScale
-{
-
-    float scale = [_myScrollView frame].size.width / _myImage.size.width;
+- (void)widthScale{
+    float scale = _myScrollView.frame.size.width / _myImage.size.width;
     if (scale>1) {
         [_myScrollView setMaximumZoomScale:scale+scale];
     }
@@ -150,9 +142,8 @@
     _currentScaleIsHeight = NO;
 }
 
-- (void)rectangleStyle
-{
-    _cropper_height = 160;
+- (void)rectangleStyle{
+    _cropper_height = self.view.bounds.size.width/2;
     if (_currentScaleIsHeight) {
         float scale = [_myScrollView frame].size.width / _myImage.size.width;
         if (scale>1) {
@@ -161,7 +152,7 @@
         [_myScrollView setMinimumZoomScale:scale];
         _currentScaleIsHeight = NO;
     }
-
+    
     if (_imgView.frame.size.width<_cropper_width) {
         [self widthScale];
     }
@@ -175,9 +166,8 @@
     [self maskView].cropRect = borderRect;
 }
 
-- (void)squareStyle
-{
-    _cropper_height = 320;
+- (void)squareStyle{
+    _cropper_height = self.view.bounds.size.width;
     
     if (_currentScaleIsHeight == NO && _myImage.size.width > _myImage.size.height) {
         float scale = _cropper_height / _myImage.size.height;
@@ -187,7 +177,7 @@
         [_myScrollView setMinimumZoomScale:scale];
         _currentScaleIsHeight = YES;
     }
-
+    
     if (_imgView.frame.size.height<_cropper_height) {
         [self heightScale];
     }
@@ -207,26 +197,32 @@
 
 #pragma mark -
 
+/**
+ 取消裁剪
+ */
 - (void)cancelCropping {
-	[_delegate imageCropperDidCancel:self];
+    [_delegate imageCropperDidCancel:self];
 }
 
+/**
+ 结束裁剪
+ */
 - (void)finishCropping {
-	float zoomScale = 1.0 / [_myScrollView zoomScale];
-
+    float zoomScale = 1.0 / [_myScrollView zoomScale];
+    
     CGPoint contentOffset = [_myScrollView contentOffset];
     CGPoint imgViewOffset = self.imgView.frame.origin;
-	CGRect rect;
-	rect.origin.x = (contentOffset.x-imgViewOffset.x) * zoomScale;
-        rect.origin.y = (contentOffset.y-imgViewOffset.y+(_myScrollView.bounds.size.height-_cropper_height)/2) * zoomScale;
-	rect.size.width = _cropper_width * zoomScale;
-	rect.size.height = _cropper_height * zoomScale;
-	
-	CGImageRef cr = CGImageCreateWithImageInRect([[_imgView image] CGImage], rect);
-	
-	UIImage *cropped = [UIImage imageWithCGImage:cr];
-	
-	CGImageRelease(cr);
+    CGRect rect;
+    rect.origin.x = (contentOffset.x-imgViewOffset.x) * zoomScale;
+    rect.origin.y = (contentOffset.y-imgViewOffset.y+(_myScrollView.bounds.size.height-_cropper_height)/2) * zoomScale;
+    rect.size.width = _cropper_width * zoomScale;
+    rect.size.height = _cropper_height * zoomScale;
+    
+    CGImageRef cr = CGImageCreateWithImageInRect([[_imgView image] CGImage], rect);
+    
+    UIImage *cropped = [UIImage imageWithCGImage:cr];
+    
+    CGImageRelease(cr);
     if (cropped) {
         [_delegate imageCropper:self didFinishCroppingWithImage:cropped];
     }
@@ -237,36 +233,30 @@
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-	return _imgView;
+    return _imgView;
 }
 
 
 #pragma mark - CropperFooterViewDelegate
 
-- (void)backBtnPressed
-{
+- (void)backBtnPressed{
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)doneBtnPressed
-{
+- (void)doneBtnPressed{
     [self finishCropping];
 }
 
-- (void)stylePressed:(BOOL)isSquare
-{
+- (void)stylePressed:(BOOL)isSquare{
     if (isSquare) {//正方形
         [self squareStyle];
-    }
-    else{
+    }else{
         [self rectangleStyle];
     }
 }
 
-- (void)dealloc
-{
+- (void)dealloc{
     NSLog(@"ImageCropperViewController dealloc!");
 }
 
 @end
-
