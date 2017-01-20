@@ -22,12 +22,12 @@
 		62F54723195D76200070206E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62F54721195D76200070206E /* InfoPlist.strings */; };
 		62F54725195D76200070206E /* ImageCropperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F54724195D76200070206E /* ImageCropperDemoTests.m */; };
 		62F54745195D79DC0070206E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F54744195D79DC0070206E /* MBProgressHUD.m */; };
-		62F54748195D7AD40070206E /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F54747195D7AD40070206E /* UIImage+fixOrientation.m */; };
 		E5E792041E2FBC5D00D294E1 /* CropperFooterView.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E792031E2FBC5D00D294E1 /* CropperFooterView.xcassets */; };
 		E5E792111E32038A00D294E1 /* ICImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7920F1E32038A00D294E1 /* ICImageCropperViewController.m */; };
 		E5E792121E32038A00D294E1 /* ICImageCropperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5E792101E32038A00D294E1 /* ICImageCropperViewController.xib */; };
 		E5E792171E32053000D294E1 /* ImageCropperFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E792141E32053000D294E1 /* ImageCropperFooterView.m */; };
 		E5E792181E32053000D294E1 /* ImageCropperMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E792161E32053000D294E1 /* ImageCropperMaskView.m */; };
+		E5E7921B1E32162600D294E1 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7921A1E32162600D294E1 /* UIImage+fixOrientation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +62,6 @@
 		62F54724195D76200070206E /* ImageCropperDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCropperDemoTests.m; sourceTree = "<group>"; };
 		62F54743195D79DC0070206E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		62F54744195D79DC0070206E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		62F54746195D7AD40070206E /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
-		62F54747195D7AD40070206E /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
 		E5E792031E2FBC5D00D294E1 /* CropperFooterView.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CropperFooterView.xcassets; sourceTree = "<group>"; };
 		E5E7920E1E32038A00D294E1 /* ICImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageCropperViewController.h; sourceTree = "<group>"; };
 		E5E7920F1E32038A00D294E1 /* ICImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageCropperViewController.m; sourceTree = "<group>"; };
@@ -72,6 +70,8 @@
 		E5E792141E32053000D294E1 /* ImageCropperFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCropperFooterView.m; path = View/ImageCropperFooterView.m; sourceTree = "<group>"; };
 		E5E792151E32053000D294E1 /* ImageCropperMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCropperMaskView.h; path = View/ImageCropperMaskView.h; sourceTree = "<group>"; };
 		E5E792161E32053000D294E1 /* ImageCropperMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCropperMaskView.m; path = View/ImageCropperMaskView.m; sourceTree = "<group>"; };
+		E5E792191E32162600D294E1 /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+fixOrientation.h"; path = "Category/UIImage+fixOrientation.h"; sourceTree = "<group>"; };
+		E5E7921A1E32162600D294E1 /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+fixOrientation.m"; path = "Category/UIImage+fixOrientation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,8 +208,8 @@
 		E5E792051E2FBE1E00D294E1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				62F54746195D7AD40070206E /* UIImage+fixOrientation.h */,
-				62F54747195D7AD40070206E /* UIImage+fixOrientation.m */,
+				E5E792191E32162600D294E1 /* UIImage+fixOrientation.h */,
+				E5E7921A1E32162600D294E1 /* UIImage+fixOrientation.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -335,9 +335,9 @@
 				E5E792111E32038A00D294E1 /* ICImageCropperViewController.m in Sources */,
 				E5E792171E32053000D294E1 /* ImageCropperFooterView.m in Sources */,
 				62F5470A195D76200070206E /* ICAppDelegate.m in Sources */,
-				62F54748195D7AD40070206E /* UIImage+fixOrientation.m in Sources */,
 				62F54706195D76200070206E /* main.m in Sources */,
 				62F54710195D76200070206E /* ICViewController.m in Sources */,
+				E5E7921B1E32162600D294E1 /* UIImage+fixOrientation.m in Sources */,
 				E5E792181E32053000D294E1 /* ImageCropperMaskView.m in Sources */,
 				62F54745195D79DC0070206E /* MBProgressHUD.m in Sources */,
 			);

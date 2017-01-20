@@ -92,10 +92,10 @@
     
     self.topImageView.image = image;
     CGSize size = image.size;
-    if (size.width>size.height) {
-        self.shopImageHeightConstraint.constant = 160;
+    if (size.width/size.height>1.5) {
+        self.shopImageHeightConstraint.constant = self.view.bounds.size.width/2;
     }else{
-        self.shopImageHeightConstraint.constant = 320;
+        self.shopImageHeightConstraint.constant = self.view.bounds.size.width;
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
