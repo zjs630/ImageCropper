@@ -97,7 +97,8 @@
     }else{
         self.shopImageHeightConstraint.constant = self.view.bounds.size.width;
     }
-    
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
